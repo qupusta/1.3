@@ -21,15 +21,16 @@ body {
 }
 
 .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 320px;
-    height: 1024px;
     box-shadow:
         5px 5px 30px 10px rgba(87, 85, 109, 0.2);
-    position: fixed;
-    padding: 24px 24px 32px 24px;
-    overflow-y: scroll;
-    overflow: hidden;
+    position: fixed;   
     background-color: #fff;
+    padding: 24px 24px 32px 24px;
+    height: 1024px;
 }
 
 .buttons,
@@ -51,7 +52,7 @@ body {
 
 .logo {
     position: absolute;
-    left: 60px;
+    left: 80px;
 }
 
 .mobile-menu__top-header {
@@ -59,7 +60,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
 }
 
 .mobile-menu__navigation-menu__list {
@@ -98,6 +99,7 @@ ul {
 
 .mobile-menu__navigation-menu__list li {
     margin-bottom: 32px;
+    position: relative;
 }
 
 .footer-phone {
@@ -110,17 +112,8 @@ ul {
     display: inline;
 }
 
-.mobile-menu__footer {
-    position: absolute;
-    bottom: 32px;
-}
-
-.mobile-menu li {
-    position: relative;
-}
-
 .footer__navigation {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .footer__language-select input[type="radio"] {
