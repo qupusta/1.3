@@ -1,13 +1,25 @@
 @font-face {
     font-family: 'TT Lakes';
     font-weight: bold;
-    src: url(../fonts/TTLakes-Bold.woff);
+    src: url(../fonts/TTLakes-Bold.woff),
+        url(../fonts/TTLakes-Bold.eot),
+        url(../fonts/TTLakes-Bold.ttf);
 }
 
 @font-face {
     font-family: 'TT Lakes';
     font-weight: medium;
-    src: url(../fonts/TTLakes-Medium.woff);
+    src: url(../fonts/TTLakes-Medium.woff),
+        url(../fonts/TTLakes-Medium.ttf),
+        url(../fonts/TTLakes-Medium.eot);
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    font-weight: normal;
+    src: url(../fonts/TTLakes-Regular.woff),
+        url(../fonts/TTLakes-Regular.eot),
+        url(../fonts/TTLakes-Regular.ttf);
 }
 
 * {
@@ -94,7 +106,7 @@
     .description__text {
         overflow: hidden;
         width: 312px;
-        height: 150px;
+        height: 153px;
     }
 
     .feedback-button {
@@ -204,7 +216,7 @@
     }
 
     .info__title-line {
-        top: 28px;
+        top: 23px;
     }
 }
 
@@ -212,6 +224,7 @@ body {
     background: #fff;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 .info {
@@ -328,4 +341,153 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 5%;
+}
+
+/* ASIDE */
+
+.hidden {
+    visibility: hidden;
+}
+
+.aside-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    box-shadow:
+        5px 5px 30px 10px rgba(87, 85, 109, 0.2);
+    position: fixed;
+    background-color: #fff;
+    padding: 0 24px;
+    height: 100%;
+}
+
+.buttons,
+.icon>a {
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.button-burger {
+    background-image: url(../icons/burger.svg);
+}
+
+.button-search {
+    background-image: url(../icons/search.svg);
+}
+
+.aside-menu__logo {
+    position: absolute;
+    left: 60px;
+}
+
+.aside-menu__top-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 32px 0;
+}
+
+.aside-menu__navigation-menu__list {
+    list-style: none;
+}
+
+.footer__navigation-icons ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.icon a {
+    margin: 0 16px 0 0;
+    display: block;
+}
+
+.icon-profile a {
+    background-image: url(../icons/profile.svg);
+}
+
+.icon-chat a {
+    background-image: url(../icons/chat.svg);
+}
+
+.icon-phone a {
+    background-image: url(../icons/call.svg);
+}
+
+.aside-menu__navigation-menu__list li a {
+    text-decoration: none;
+    color: #7E7E82;
+}
+
+.aside-menu__navigation-menu__list li {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.aside-menu__footer {
+    margin-bottom: 32px;
+}
+
+.footer-phone {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer__language-select li {
+    list-style: none;
+    display: inline;
+}
+
+.footer__navigation {
+    margin-bottom: 40px;
+}
+
+.footer__language-select input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.aside-menu__navigation-menu__list li a:focus::before {
+    content: url(../icons/highlight.svg);
+    position: absolute;
+    left: -24px;
+    top: -4px;
+}
+
+.aside-menu li a:focus,
+.footer__language-select li:focus {
+    color: #7E7E82;
+}
+
+.footer__language-select input:checked+label {
+    color: #7E7E82;
+}
+
+.footer__language-select>label {
+    margin-right: 7px;
+    transition: all 0.3s;
+}
+
+.buttons,
+.icon {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.buttons:hover,
+.icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.footer__language-select label:hover {
+    cursor: pointer;
 }
