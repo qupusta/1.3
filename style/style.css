@@ -36,6 +36,19 @@
         margin-top: 24px;
         gap: 3em;
     }
+    
+    .navigation-container {
+        padding: 0 16px 16px 16px;
+    }
+
+    .navigation-container__brands-list--mobile {
+        height: 120px;
+    }
+
+    .navigation-container__brands-list,
+    .navigation-container__wrapper {
+        display: none;
+    }
 
     .info__navigation {
         margin-left: 16px;
@@ -72,6 +85,10 @@
         overflow-y: hidden;
     }
 
+    .brands-expander {
+        display: none;
+    }
+
 }
 
 @media (min-width:769px) {
@@ -93,6 +110,32 @@
         flex-direction: row;
         align-items: stretch;
         padding: 0 24px 24px 24px;
+    }
+
+    .card {
+        width: 240px;
+        margin-right: 14px;
+    }
+    
+    .brands-expander,
+    .navigation-container__wrapper {
+        display: block;
+    }
+
+    .navigation-container {
+        padding: 0 24px 24px 24px;
+    }
+
+    .navigation-container__brands-list {
+        display: flex;
+        flex-flow: row wrap;
+        row-gap: 16px;
+        overflow: hidden;
+        height: 174px;
+    }
+
+    .navigation-container__brands-list--mobile {
+        display: none;
     }
 
     .description__wrapper {
@@ -156,6 +199,15 @@
     main {
         padding: 0 32px 32px 32px;
         margin-top: 12px;
+    }
+
+    .navigation-container {
+        padding: 0 32px 32px 32px;
+    }
+
+    .navigation-container__brands-list,
+    .navigation-container__brands-list--mobile {
+        gap: 16px 34px;
     }
 
     .feedback-button {
@@ -346,6 +398,7 @@ body {
     width: 24px;
     height: 24px;
     vertical-align: middle;
+    display: inline-block;
 }
 
 .text-expander:focus {
@@ -498,4 +551,121 @@ ul {
 
 .footer__language-select label:hover {
     cursor: pointer;
+}
+
+/* BLOCK 1.5 */
+
+.navigation-container__expander-button-block {
+    margin-top: 16px;
+    display: inline-flex;
+}
+
+.brands-expander {
+    height: 40px;
+    position: relative;
+    font-weight: 600;
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    border: hidden;
+    background-color: inherit;
+}
+
+.brands-expander__icon--unactive {
+    vertical-align: middle;
+}
+
+.brands-expander__icon--active {
+    vertical-align: middle;
+    transform: rotate(180deg);
+}
+
+.brands-expander:focus {
+    border-radius: 6px;
+    border: 2px solid #88FFEC;
+}
+
+.brand-list__elem {
+    background-color: #fff;
+    border: #EAEAEA 1px solid;
+    border-radius: 8px;
+}
+
+.brand-list__elem {
+    display: block;
+    width: 240px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-position: 20px;
+    min-width: 0;
+}
+
+.brand-list__elem::after {
+    content: url(../icons/go.svg);
+    left: 180px;
+    top: 16px;
+    position: relative;
+}
+
+.navigation-container__header__title {
+    color: #7E7E82;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.navigation-container {
+    background-color: #F8F8F8;
+}
+
+.brand-list__elem.item1 {
+    background-image: url(../brands/Lenovo.png);
+}
+
+.brand-list__elem.item2 {
+    background-image: url(../brands/acer.png);
+}
+
+.brand-list__elem.item3 {
+    background-image: url(../brands/Bosch.png);
+}
+
+.brand-list__elem.item4 {
+    background-image: url(../brands/apple.png);
+}
+
+.brand-list__elem.item5 {
+    background-image: url(../brands/Samsung.png);
+}
+
+.brand-list__elem.item6 {
+    background-image: url(../brands/SONY.png);
+}
+
+.brand-list__elem.item7 {
+    background-image: url(../brands/ViewSonic.png);
+}
+
+.brand-list__elem.item8 {
+    background-image: url(../brands/HP.png);
+}
+
+.brand-list__elem.item9 {
+    background-image: url(../brands/Lenovo.png);
+}
+
+.brand-list__elem.item10 {
+    background-image: url(../brands/acer.png);
+}
+
+.brand-list__elem.item11 {
+    background-image: url(../brands/Samsung.png);
+}
+
+/* SWIPER */
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
 }
